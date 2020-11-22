@@ -3,7 +3,8 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import { Container, Row, Col } from 'react-bootstrap';
 
-import Header from '../Header/header';
+import { StyledFooter, StyledCopyright } from './styles';
+
 import Navbar from '../Navbar';
 
 interface IProps {
@@ -34,15 +35,13 @@ const Layout: React.FC<IProps> = ({ children, pageInfo }) => (
             </Col>
           </Row>
         </Container>
-        <Container fluid className="px-0">
-          <Row noGutters>
-            <Col className="footer-col">
-              <footer>
-                <span>Vitor Martins©</span>
-              </footer>
-            </Col>
-          </Row>
-        </Container>
+        {/* <Container fluid className="px-0">
+          <Row noGutters> */}
+        <StyledFooter>
+          <StyledCopyright>Vitor Martins ©2020</StyledCopyright>
+        </StyledFooter>
+        {/* </Row>
+        </Container> */}
       </>
     )}
   />
