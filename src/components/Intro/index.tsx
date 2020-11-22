@@ -29,6 +29,10 @@ const Intro: React.FC = () => {
     }
   `);
 
+  const openNewTab = (url: string): any => {
+    return window.open(url, '_blank');
+  };
+
   return (
     <Container>
       <CenterComponent>
@@ -55,10 +59,26 @@ const Intro: React.FC = () => {
           </Button>
         </ButtonContainer>
         <IconsContainer>
-          <CircleIcon icon={faLinkedinIn} color="#fff" />
-          <CircleIcon icon={faGithub} color="#fff" />
-          <CircleIcon icon={faTwitter} color="#fff" />
-          <CircleIcon icon={faEnvelope} color="#fff" />
+          <CircleIcon
+            onClick={() => openNewTab('https://www.linkedin.com/in/martinsvitor/')}
+            icon={faLinkedinIn}
+            color="#fff"
+          />
+          <CircleIcon
+            onClick={() => openNewTab('https://github.com/mrtins')}
+            icon={faGithub}
+            color="#fff"
+          />
+          <CircleIcon
+            onClick={() => openNewTab('https://twitter.com/mrtinsvitor')}
+            icon={faTwitter}
+            color="#fff"
+          />
+          <CircleIcon
+            onClick={() => openNewTab('mailto:vitorfigmartins@gmail.com')}
+            icon={faEnvelope}
+            color="#fff"
+          />
         </IconsContainer>
       </CenterComponent>
     </Container>

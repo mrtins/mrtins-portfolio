@@ -9,10 +9,11 @@ interface IProps {
   iconStyle?: Record<string, unknown>;
   color?: string;
   children?: React.ReactNode;
+  onClick?: any;
 }
 
-const CircleIcon: React.FC<IProps> = ({ icon, iconStyle, containerSytle, color }) => (
-  <StyledCircle containerStyle={containerSytle}>
+const CircleIcon: React.FC<IProps> = ({ icon, iconStyle, containerSytle, color, onClick }) => (
+  <StyledCircle containerStyle={containerSytle} onClick={onClick}>
     <FontAwesomeIcon icon={icon} style={iconStyle} color={color} />
   </StyledCircle>
 );
