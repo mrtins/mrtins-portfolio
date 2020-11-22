@@ -1,0 +1,9 @@
+.navbar-link {
+  color: #fff !important;
+}
+
+.navbar-link:hover {
+  color: #007bff !important;
+  font-weight: 400;
+  transition: 0.5s;
+}
