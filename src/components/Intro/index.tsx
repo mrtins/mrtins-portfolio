@@ -34,7 +34,14 @@ const Intro: React.FC = () => {
   };
 
   return (
-    <Container>
+    <Container
+      style={{
+        height: '90vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
       <CenterComponent>
         <StyledGatsbyImage
           fixed={data.image.childImageSharp.fixed}
@@ -43,7 +50,7 @@ const Intro: React.FC = () => {
         />
         <StyledTitle>Vitor Martins</StyledTitle>
         <Divider width={35} />
-        <Text>
+        <Text style={{ width: '40%' }}>
           Hey I’m Vitor! I’m a Software Engineer specialized in Web and Mobile Development.
         </Text>
         <Divider width={25} />
