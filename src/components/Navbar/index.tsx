@@ -13,7 +13,7 @@ interface IProps {
 const CustomNavbar: React.FC<IProps> = ({ pageInfo }) => {
   return (
     <>
-      <Navbar variant="dark" expand="md" id="site-navbar" style={styles.navbarBorder}>
+      <Navbar variant="dark" expand="md" id="site-navbar" fixed="top" style={styles.navbarBorder}>
         <Link to="/" className="link-no-style">
           <Navbar.Brand as="span">
             <img src={devIcon} width="32px" height="auto" />
@@ -51,7 +51,8 @@ const CustomNavbar: React.FC<IProps> = ({ pageInfo }) => {
 
 const styles = {
   navbarBorder: {
-    borderBottom: '1px solid #3282B8',
+    // borderBottom: '1px solid #3282B8',
+    backgroundColor: '#222831',
   },
 };
 
