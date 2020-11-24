@@ -3,11 +3,7 @@ import React from 'react';
 import { StyledText } from './styles';
 
 interface IProps {
-  fontSize?: string;
-  fontWeight?: string;
-  fontFamily?: string;
-  color?: string;
-  width?: string;
+  style?: Record<string, unknown>;
 }
 
 const Text: React.FC<IProps> = (props) => <StyledText {...props} />;

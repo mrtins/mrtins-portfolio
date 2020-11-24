@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const StyledCircle = styled.span`
   border-radius: 50%;
@@ -11,9 +11,13 @@ export const StyledCircle = styled.span`
   margin: 0 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
-  &:hover {
-    cursor: pointer;
-    background-color: #007bff;
-    transition: 0.5s;
-  }
+  ${(props: any) =>
+    props.hover &&
+    css`
+      &:hover {
+        cursor: pointer;
+        background-color: #007bff;
+        transition: 0.5s;
+      }
+    `}
 `;

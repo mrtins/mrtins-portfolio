@@ -3,10 +3,7 @@ import React from 'react';
 import { StyledTitle } from './styles';
 
 interface IProps {
-  fontSize?: string;
-  fontWeight?: string;
-  fontFamily?: string;
-  color?: string;
+  style?: Record<string, unknown>;
 }
 
 const Title: React.FC<IProps> = (props) => <StyledTitle {...props} />;

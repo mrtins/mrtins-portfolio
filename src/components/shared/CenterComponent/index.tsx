@@ -4,8 +4,11 @@ import { Center } from './styles';
 
 interface IProps {
   children: ReactNode;
+  style?: Record<string, unknown>;
 }
 
-const CenterComponent: React.FC<IProps> = ({ children }) => <Center>{children}</Center>;
+const CenterComponent: React.FC<IProps> = ({ children, ...props }) => (
+  <Center {...props}>{children}</Center>
+);
 
 export default CenterComponent;
